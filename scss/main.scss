@@ -1,0 +1,264 @@
+@import 'config';
+@import 'menu';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    @include background;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// all heading
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+
+    // same as h1.lg-heading in css
+    &.lg-heading{
+        font-size: 6rem;
+    }
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 10px;
+        background: rgba(lighten($primary-color, 2), 0.05)
+    }
+}
+
+// all link 
+a{
+    color: white;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+.text-secondary{
+    color: $secondary-color
+}
+main{
+    padding: 4rem;
+    // height: 100%;
+    min-height: calc(100vh - 60px);
+    
+    .icons{
+        margin-top: 1rem;
+        a{
+            padding: 0.4rem;
+
+            &:hover{
+                color: $secondary-color;
+                @include easeOut;
+            }
+            &.git-color:hover{
+                color: rgb(223, 86, 196);
+                
+            }
+        }
+    }
+
+    &#home{
+        overflow: hidden;
+        h1{
+            margin-top: 20vh;
+        }
+    }
+}
+// -----------------------------------------------------------------------------------------
+// About Me CSS
+.bg-color{
+    background-image: linear-gradient(to right, #292e49, #536976);
+}
+.about-info{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+
+    .bio-image{
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+        // background-color: black;
+        width: 250px;
+        height: 250px;
+        background-color: rgb(99, 198, 250);
+    }
+    .bio{
+        grid-area: bio;
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.856);
+        
+        p{
+            font-weight: 100px;
+            font-size: 1.3rem;
+        }
+    }
+    .job{
+        background-image: linear-gradient(to right, #16222a, #355a6d);
+        color: rgba(255, 255, 255, 0.863);
+        border-radius: 5%;
+        padding: 0.5rem 1rem;
+        // margin-right: 0.3rem;
+        &:hover{
+            background-image: linear-gradient(to right, #0f181f, #1e3f50);
+            @include easeOut;
+        }
+    }
+    .job-1{
+        grid-area: job1;
+        border-bottom: $secondary-color 5px solid;
+        font-size: 1.1rem;
+        .list{
+            list-style: none;
+            .list-item{
+                padding: 0.2rem;
+            }
+        }
+    }
+    .job-2{
+        grid-area: job2;
+        border-bottom: rgb(187, 10, 10) 5px solid;
+        font-size: 1.1rem;
+    }
+    .job-3{
+        grid-area: job3;
+        border-bottom: rgb(44, 146, 44) 5px solid;
+        .list2-item{
+            list-style: none;
+            padding: 0.2rem;
+        }
+    }
+}
+// -----------------------------------------------------------------------------------------
+// Work/Projects CSS
+.bg-work-color{
+    background-image: linear-gradient(to right, #2c3e50, #4a5e6d);
+    .text-secondary{
+        color: #2fd2c1;
+    }
+}
+.project{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    img{
+        background-attachment: fixed;
+        background-size: cover ;
+        width: 100%;
+        height: 400px;
+        border: #fff 3px solid;
+        border-radius: 7%;
+      
+        &:hover{
+            // opacity: 0.5;
+            border: rgb(3, 119, 196) 4px solid;
+            border-color: $secondary-color;
+            // height: 260px;
+            @include easeOut;
+        }
+    }
+}
+
+//Button styles
+.item .button{
+    background-image: linear-gradient(to right, rgb(58, 95, 218), rgb(24, 142, 169));
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: none;
+    font-weight: bold;
+    display: block;
+    padding: 1rem 1rem;
+    width: 380px;
+    height: 55px;
+    border: 0;
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 4%;
+
+    &:hover{
+        border: white 3px solid;
+        @include easeOut;
+        height: 70px;
+    }
+}
+.item .button2{
+    background-image: linear-gradient(to right, #6441a5, #734b6d);
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: none;
+    font-weight: bold;
+    display: block;
+    padding: 0.8rem 1rem;
+    width: 380px;
+    height: 55px;
+    border: 0;
+    margin-bottom: 0.8rem;
+    margin-left: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 4%;
+
+    &:hover{
+        border: white 3px solid;
+        @include easeOut;
+        height: 70px;
+        margin-bottom: 1rem;
+    }
+}
+span{
+    font-family:  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+// -----------------------------------------------------------------------------------------
+// Contact Information page
+.bg-contact-color{
+    background-image: linear-gradient(to right, #151e6e, #920b36);
+}
+.contact-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div{
+        font-size: 2rem;
+        border: white 3px solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        border-radius: 5%;
+        
+        &:hover{
+            padding: 2.5rem 3.5rem;
+            background: #74047e;
+            color: set-text-color(#74047e);
+            border-color: #d2406e;
+            @include easeOut;
+            span{
+                color: #5ab5e2;
+            }
+        }
+    }
+    
+}
+
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: black;
+    color: set-text-color(#3a6073);
+    height: 60px;
+}
+@import 'mobile';

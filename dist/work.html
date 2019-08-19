@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/3e483ed6b4.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/simplelightbox.min.css">
+    <title>View My Projects</title>
+</head> 
+<body class="bg-work-color">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="portrait">
+                    <img src="./img/portfolio.png" alt="" class = "bio-image">
+                </div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item ">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item ">
+                        <a href="about.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item current">
+                        <a href="work.html" class="nav-link">My Projects</a>
+                </li>
+                <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Info</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="work">
+        <h1 class="lg-heading">My <span class="text-secondary">Projects</span></h1>
+        <h2 class="sm-heading">Check out some of my projects...</h2>
+        <div class="gallery">
+            <div class="project">
+                <div class="item">
+                    <a href="/dist/img/booklist.jpg">
+                        <img src="/dist/img/booklist.jpg" alt="">
+                    </a>
+                    <button type="button" class="button fab fas fa-eye" onclick="page1Func()"> BookList Project with javaScript</button>
+                    <button type="button" class="button2 fab fa-github" onclick="page1GFunc()"> <span> GitHub</span></button>
+                </div>
+                <script type="text/javascript">
+                    function page1Func(){ window.location.href = "https://moelatt.github.io/bookList/#";}
+                    function page1GFunc(){ window.location.href = "https://github.com/moelatt/bookList";}
+
+                    function page2Func(){ window.location.href = "https://moelatt.github.io/searchCapital-JSON/";}
+                    function page2GFunc(){ window.location.href = "https://github.com/moelatt/searchCapital-JSON";}
+
+                    function page3Func(){ window.location.href = "https://moelatt.github.io/Car_Blog_HTML-CSS/";}
+                    function page3GFunc(){ window.location.href = "hhttps://github.com/moelatt/Car_Blog_HTML-CSS";}
+
+                    function page4Func(){ window.location.href = "https://moelatt.github.io/bookList/#";}
+                    function page4GFunc(){ window.location.href = "https://github.com/moelatt/bookList";}
+                </script>
+                <div class="item">
+                    <a href="/dist/img/Search_Json.jpg">
+                        <img src="/dist/img/Search_Json.jpg" alt="">
+                    </a>
+                    <button type="button" class="button fab fas fa-eye" onclick="page2Func()"> Search Capital Project with JSON file</button>
+                    <button type="button" class="button2 fab fa-github" onclick="page2GFunc()"><span> GitHub</span></button>
+                </div>
+                <div class="item">
+                    <a href="/dist/img/car_page_sass.jpg">
+                        <img src="/dist/img/car_page_sass.jpg" alt="">
+                    </a>
+                    <button type="button" class="button fab fas fa-eye" onclick="page3Func()"> Car Blog with sass Project</button>
+                    <button type="button" class="button2 fab fa-github" onclick="page3GFunc()"> <span> GitHub</span></button>
+                </div>
+                <div class="item">
+                        <a href="/dist/img/login_page.jpg">
+                            <img src="/dist/img/login_page.jpg" alt="">
+                        </a>
+                        <button type="button" class="button fab fas fa-eye" onclick="page4Func()"> Passport Page with MongoDB Project</button>
+                        <button type="button" class="button2 fab fa-github" onclick="page4GFunc()"> <span> GitHub</span></button>
+                </div>
+            </div>
+        </div>   
+    </main>
+    <footer id="main-footer">
+        Copyright &copy; 2019
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/simple-lightbox.min.js"></script>
+    <script>$(function(){
+        const $gallery = $('.gallery a').simpleLightbox();
+    })
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
