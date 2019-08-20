@@ -185,7 +185,7 @@ main {
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.872); }
     .about-info .bio .text-secondary {
-      color: #fc4343;
+      color: #2fb7f5;
       font-size: 2.5rem; }
     .about-info .bio p {
       font-weight: 100px;
@@ -198,6 +198,8 @@ main {
     .about-info .job:hover {
       background-image: linear-gradient(to right, #0f181f, #1e3f50);
       transition: all 0.5s ease-out; }
+    .about-info .job h3 {
+      color: #3fe0fc; }
   .about-info .job-1 {
     grid-area: job1;
     border-bottom: #2f94d8 5px solid;
