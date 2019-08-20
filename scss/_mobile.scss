@@ -43,9 +43,16 @@
         transform: translate3d(100%, 0, 0);
 
         .portrait{
-            background: url();
-            width: 150px;
-            height: 150px;
+            .bio-image{
+                // grid-area: bioimage;
+                margin: auto;
+                border-radius: 50%;
+                border: $secondary-color 3px solid;
+                // background-color: black;
+                width: 150px;
+                height: 150px;
+                background-color: rgb(99, 198, 250);
+            }
         }
     }
 

@@ -76,6 +76,12 @@ main{
 // About Me CSS
 .bg-color{
     background-image: linear-gradient(to right, #292e49, #536976);
+    .text-secondary{
+        font-size: 5rem;
+    }
+    .lg-heading{
+        font-size: 5rem;
+    }
 }
 .about-info{
     display: grid;
@@ -97,7 +103,12 @@ main{
     .bio{
         grid-area: bio;
         font-size: 1.5rem;
-        color: rgba(255, 255, 255, 0.856);
+        color: rgba(255, 255, 255, 0.872);
+
+        .text-secondary{
+            color: #fc4343;
+            font-size: 2.5rem;
+        }
         
         p{
             font-weight: 100px;

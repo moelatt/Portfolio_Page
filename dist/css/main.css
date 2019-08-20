@@ -54,7 +54,6 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait .bio-image {
-      grid-area: bioimage;
       margin: auto;
       border-radius: 50%;
       border: #2f94d8 3px solid;
@@ -162,6 +161,10 @@ main {
 
 .bg-color {
   background-image: linear-gradient(to right, #292e49, #536976); }
+  .bg-color .text-secondary {
+    font-size: 5rem; }
+  .bg-color .lg-heading {
+    font-size: 5rem; }
 
 .about-info {
   display: grid;
@@ -180,7 +183,10 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.856); }
+    color: rgba(255, 255, 255, 0.872); }
+    .about-info .bio .text-secondary {
+      color: #fc4343;
+      font-size: 2.5rem; }
     .about-info .bio p {
       font-weight: 100px;
       font-size: 1.3rem; }
@@ -337,10 +343,13 @@ span {
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url();
+    .menu-branding .portrait .bio-image {
+      margin: auto;
+      border-radius: 50%;
+      border: #2f94d8 3px solid;
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      background-color: #63c6fa; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
