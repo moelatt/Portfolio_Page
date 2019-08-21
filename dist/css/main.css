@@ -6,24 +6,30 @@
   cursor: pointer;
   transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
+    width: 40px;
+    height: 6px;
+    border-radius: 5px;
     margin: 0 0 5px 0;
     background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
-    .menu-btn.close .btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px); }
-    .menu-btn.close .btn-line:nth-child(2) {
-      opacity: 0; }
-    .menu-btn.close .btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -6px); }
+    .menu-btn.close:hover {
+      transform: rotate(275deg); }
+    .menu-btn.close .btn-line {
+      background-color: #08cda9; }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: translateY(16px) rotate(45deg); }
+      .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0; }
+      .menu-btn.close .btn-line:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg); }
 
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 100%;
   opacity: 0.95;
   visibility: hidden; }
   .menu.show {
@@ -71,15 +77,16 @@
         color: #44fff6;
         transition: all 0.5s ease-out; }
   .menu .nav-link {
+    font-family: 'PT Sans', sans-serif;
     display: inline-block;
     position: relative;
-    font-size: 30px;
-    text-transform: uppercase;
+    font-size: 50px;
+    text-transform: capitalize;
     padding: 1rem 0;
-    font-weight: 300;
     color: #fff;
     text-decoration: none; }
   .menu .nav-link:hover {
+    font-weight: bold;
     color: #2f94d8;
     transition: all 0.5s ease-out; }
 
@@ -129,6 +136,14 @@ h1, h2, h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 10px;
     background: rgba(73, 73, 73, 0.05); }
+  h1.lg-headingIndex, h2.lg-headingIndex, h3.lg-headingIndex {
+    text-align: center;
+    font-size: 6rem; }
+  h1.sm-headingIndex, h2.sm-headingIndex, h3.sm-headingIndex {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0.2rem 10px;
+    background: rgba(73, 73, 73, 0.05); }
 
 a {
   color: white;
@@ -142,13 +157,24 @@ header {
 .text-secondary {
   color: #2f94d8; }
 
+.Portfolio-Image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: #2f94d8 3px solid;
+  width: 250px;
+  height: 250px;
+  background-color: #63c6fa; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    text-align: center; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.6rem; }
       main .icons a:hover {
         color: #2f94d8;
         transition: all 0.5s ease-out; }
@@ -157,7 +183,7 @@ main {
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 0.5vh; }
 
 .bg-color {
   background-image: linear-gradient(to right, #292e49, #536976); }
@@ -219,10 +245,25 @@ main {
       list-style: none;
       padding: 0.2rem; }
 
-.bg-work-color {
-  background-image: linear-gradient(to right, #2c3e50, #4a5e6d); }
-  .bg-work-color .text-secondary {
-    color: #2fd2c1; }
+body#bg-work-color {
+  background: url(../img/nature.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
+  body#bg-work-color::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to right, #2c3e50, #4a5e6d);
+    background-size: fixed;
+    background-attachment: fixed;
+    opacity: 0.4; }
+
+#bg-work-color .text-secondary {
+  color: #2fd2c1; }
 
 .project {
   display: grid;
@@ -285,7 +326,21 @@ span {
   font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
 
 .bg-contact-color {
-  background-image: linear-gradient(to right, #151e6e, #920b36); }
+  background: url("../img/city.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+  .bg-contact-color::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to right, #0b588b, #0c5374);
+    background-size: fixed;
+    background-attachment: fixed;
+    opacity: 0.6; }
 
 .contact-boxes {
   display: flex;

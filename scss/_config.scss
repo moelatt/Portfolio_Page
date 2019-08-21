@@ -2,6 +2,8 @@ $primary-color: #444;
 $secondary-color: #2f94d8;
 $show-home-image: true;
 $home-image: url(../img/code2.jpg);
+$work-image: url(../img/nature.jpg);
+$show-work-image: true;
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -29,6 +31,32 @@ $background-opacity: 0.9;
             }
         }
     }
+}
+
+// Project background image set up
+@mixin  projectBackground {
+    @if $show-work-image{
+        &#bg-work-color{
+            background: $work-image;
+            background-size: cover;
+            background-attachment: fixed;
+
+            &::after{
+                content: '';
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-image: linear-gradient(to right, #2c3e50, #4a5e6d);
+                background-size: fixed;
+                background-attachment: fixed;
+                opacity: 0.4;
+            }
+        }
+    }
+    
 }
 
 // Set Text Color depend on background color

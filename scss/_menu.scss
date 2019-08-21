@@ -8,8 +8,9 @@
     @include easeOut;
 
     .btn-line{
-        width: 28px;
-        height: 3px;
+        width: 40px;
+        height: 6px;
+        border-radius: 5px;
         margin: 0 0 5px 0; // top = 0, right = 0, bttom = 5, left = 0
         background: set-text-color($primary-color);
         @include easeOut;
@@ -18,11 +19,15 @@
     // Rotate Into X With Menu Lines
     &.close{
         transform: rotate(180deg);
+        &:hover{
+            transform: rotate(275deg);
+        }
 
         .btn-line{
             // Line(1) - Rotate
+            background-color: rgb(8, 205, 169);
             &:nth-child(1){
-                transform: rotate(45deg) translate(5px, 5px);
+                transform: translateY(16px) rotate(45deg);
             }
             // Line(2) - Hide
             &:nth-child(2){
@@ -31,7 +36,7 @@
 
             // Line(3) - Rotate 
             &:nth-child(3){
-                transform: rotate(-45deg) translate(7px,-6px);
+                transform: translateY(-6px) rotate(-45deg);
             }
         }
     }
@@ -42,6 +47,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    height: 100%;
     opacity: 0.95;
     visibility: hidden;
 
@@ -118,16 +124,18 @@
     }
 
     .nav-link{
+        font-family: 'PT Sans', sans-serif;
         display: inline-block;
         position: relative;
-        font-size: 30px;
-        text-transform: uppercase;
+        font-size: 50px;
+        text-transform: capitalize;
         padding: 1rem 0; // 1 top and bottom , 0 left and right
-        font-weight: 300;
+        // font-weight: 300;
         color: #fff;
         text-decoration: none;
     }
     .nav-link:hover{
+        font-weight: bold;
         color: $secondary-color;
         @include easeOut;
     }
