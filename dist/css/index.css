@@ -78,7 +78,7 @@ header{
 }
 .menu-bg{
     position: fixed;
-    background-image: url('/Portfolio_Page/dist/img/coffe.jpg');
+    background-image: url('../img/coffe.jpg');
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
