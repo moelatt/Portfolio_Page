@@ -7,38 +7,36 @@
     <script src="https://kit.fontawesome.com/3e483ed6b4.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>About Me</title>
 </head> 
 <body class="bg-color">
-    <!-- id="bg-img" -->
-    <!-- <div class="overlay"></div> -->
     <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait">
-                    <img src="./img/portfolio.png" alt="" class = "bio-image">
-                </div>
+        <div id="menu-btn">
+            <div id="menu-bar" onclick="onClickAbout()">
+                <div id = "bar1" class="bar"></div>
+                <div id = "bar2" class="bar"></div>
+                <div id = "bar3" class="bar"></div>
             </div>
-            <ul class="menu-nav">
-                <li class="nav-item ">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item current">
-                        <a href="about.html" class="nav-link">About Me</a>
-                </li>
-                <li class="nav-item">
-                        <a href="work.html" class="nav-link">My Projects</a>
-                </li>
-                <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact Info</a>
-                </li>
-            </ul>
-        </nav>
+        </div>
+        <div class="about-bg" id="about-bg">
+            <nav class="menuIndex" id="aboutIndex">
+                <ul class="nav" id="nav">
+                    <li class="nav-itemA">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-itemA current">
+                            <a href="about.html" class="nav-link">About Me</a>
+                    </li>
+                    <li class="nav-itemA">
+                            <a href="work.html" class="nav-link">My Projects</a>
+                    </li>
+                    <li class="nav-itemA">
+                            <a href="contact.html" class="nav-link">Contact Info</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main id="about">
         <h1 class="lg-heading">My <span class="text-title">Experiences</span></h1>
@@ -116,5 +114,6 @@
         Copyright &copy; 2019
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
