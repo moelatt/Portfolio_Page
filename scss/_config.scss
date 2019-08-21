@@ -3,6 +3,7 @@ $secondary-color: #2f94d8;
 $show-home-image: true;
 $home-image: url(../img/code2.jpg);
 $work-image: url(../img/nature.jpg);
+$about-image: url(../img/stone.jpg);
 $show-work-image: true;
 $background-opacity: 0.9;
 
@@ -60,6 +61,7 @@ $background-opacity: 0.9;
     }
     
 }
+
 
 // Set Text Color depend on background color
 @function set-text-color($color){

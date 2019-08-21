@@ -148,3 +148,16 @@
         transition-delay: $x * 0.1s; // 
     }
 }
+//  Same code with above
+// .nav-item:nth-child(1){
+//     transition-delay: 0.1s;
+// }
+// .nav-item:nth-child(2){
+//     transition-delay: 0.2s;
+// }
+// .nav-item:nth-child(3){
+//     transition-delay: 0.3s;
+// }
+// .nav-item:nth-child(4){
+//     transition-delay: 0.4s;
+// }
