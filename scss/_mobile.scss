@@ -14,6 +14,20 @@
 
 // Tablets & Small Laptops
 @include mediaMd{
+    main#home{
+        h1{
+            position: relative;
+            font-size: 5rem;
+        }
+        .Portfolio-Image{
+            margin: auto;
+            border-radius: 50%;
+            border: $secondary-color 3px solid;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(99, 198, 250);
+        }
+    }
     main{
         align-items: center;
         text-align: center;
@@ -44,11 +58,9 @@
 
         .portrait{
             .bio-image{
-                // grid-area: bioimage;
                 margin: auto;
                 border-radius: 50%;
                 border: $secondary-color 3px solid;
-                // background-color: black;
                 width: 150px;
                 height: 150px;
                 background-color: rgb(99, 198, 250);
@@ -73,8 +85,25 @@
 
 // Smartphones
 @include mediaSm{
-    main#home h1{
-        margin-top: 10vh;
+    main#home, main#about, main#work, main#contact {
+        h1{
+        position: relative;
+        font-size: 5rem;
+        }
+        .lg-heading{
+            font-size: 3.5rem;
+        }
+        .text-secondary{
+            font-size: 2rem;
+        }
+        .Portfolio-Image, .bio-image{
+            margin: auto;
+            border-radius: 50%;
+            border: $secondary-color 3px solid;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(99, 198, 250);
+        }
     }
     .project{
         grid-template-columns: 1fr;
