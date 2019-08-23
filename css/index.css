@@ -74,7 +74,7 @@ li.current > a:hover{
     transition: all 0.5s ease-out;
 }
 .menuIndex .nav-itemI{
-    transform: translate3d(0, 1000px, 0);
+    transform: translate3d(1000px, -1000px, 0);
     transition: all 0.7s ease-out;
 }
 
@@ -82,16 +82,16 @@ li.current > a:hover{
     transform: translate3d(0,0,0)
 }
 .nav-itemI:nth-child(1){
-    transition-delay: 0.1s;
+    transition-delay: 0.6s;
 }
 .nav-itemI:nth-child(2){
-    transition-delay: 0.2s;
-}
-.nav-itemI:nth-child(3){
     transition-delay: 0.4s;
 }
+.nav-itemI:nth-child(3){
+    transition-delay: 0.2s;
+}
 .nav-itemI:nth-child(4){
-    transition-delay: 0.6s;
+    transition-delay: 0.1s;
 }
 .change{
     visibility: visible;  
@@ -101,11 +101,13 @@ li.current > a:hover{
     background-image: url('../img/coffe.jpg');
     background-size: cover;
     background-attachment: fixed;
+    border-radius: 20px;
     overflow: hidden;
     width: 100%;
     height: 100%;
-    transform: translate3d(0, 100%,0);
-    transition: all 0.7s ease-out;
+    transform: translate3d(100%, -100%, 0);
+    transition: all 0.9s ease-out;
+    
 }
 .menu-bg::after{
     content: '';
@@ -120,6 +122,18 @@ li.current > a:hover{
 }
 .change-bg {
     transform: translate3d(0,0,0);
+    -webkit-animation: change-bg 1s ease-out 1s 3 alternate;
+}
+@-webkit-keyframes change-bg {
+    0%       { left:5px; }
+    25%, 75% { left:15px; }
+    50%      { left:20px; }
+    100%     { left:0;}
+
+    0%       { bottom:5px; }
+    25%, 75% { bottom:15px; }
+    50%      { bottom:20px; }
+    100%     { bottom:0;}
 }
 /* ------------------------------------------------------------------ */
 /* About Page background setting */
@@ -131,10 +145,10 @@ li.current > a:hover{
     transform: translate3d(0,0,0)
 }
 .nav-itemA:nth-child(1){
-    transition-delay: 0.4s;
+    transition-delay: 0.6s;
 }
 .nav-itemA:nth-child(2){
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
 }
 .nav-itemA:nth-child(3){
     transition-delay: 0.2s;
@@ -149,10 +163,11 @@ li.current > a:hover{
     background-attachment: fixed;
     overflow: hidden;
     float: right;
+    border-radius: 20px;
     width: 100%;
     height: 100vh;
     transform: translate3d(0, -100%,0);
-    transition: all 0.7s ease-out;
+    transition: all 0.9s ease-out;
 }
 .about-bg::after{
     content: '';
@@ -168,4 +183,14 @@ li.current > a:hover{
 
 .changeAbout-bg{
     transform: translate3d(0,0,0);
+    overflow-y: hidden;
+    -webkit-animation:about-bg 1s ease-out 1s 3 alternate;
+}
+/* Bounce affect for css */
+
+@-webkit-keyframes about-bg {
+      0%       { bottom:5px; }
+      25%, 75% { bottom:15px; }
+      50%      { bottom:20px; }
+      100%     { bottom:0;}
 }

@@ -15,7 +15,7 @@
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close:hover {
-      transform: rotate(275deg); }
+      transform: rotate(360deg); }
     .menu-btn.close .btn-line {
       background-color: #08cda9; }
       .menu-btn.close .btn-line:nth-child(1) {
@@ -124,8 +124,8 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-image: linear-gradient(to right, #1f1d1d, #075e66);
-      opacity: 0.9; }
+      background-image: linear-gradient(to right, #023539, black, #053411);
+      opacity: 0.8; }
 
 h1, h2, h3 {
   margin: 0;
@@ -138,7 +138,8 @@ h1, h2, h3 {
     background: rgba(73, 73, 73, 0.05); }
   h1.lg-headingIndex, h2.lg-headingIndex, h3.lg-headingIndex {
     text-align: center;
-    font-size: 6rem; }
+    font-size: 6rem;
+    color: #fffefb; }
   h1.sm-headingIndex, h2.sm-headingIndex, h3.sm-headingIndex {
     text-align: center;
     margin-bottom: 2rem;
@@ -168,7 +169,7 @@ header {
   border: #2f94d8 3px solid;
   width: 250px;
   height: 250px;
-  background-color: #63c6fa; }
+  background-image: linear-gradient(to bottom, #2ab4ff, pink); }
 
 main {
   padding: 4rem;
