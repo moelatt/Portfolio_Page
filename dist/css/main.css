@@ -4,18 +4,19 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all 0.5s ease-out; }
+  transition: all 0.5s ease-in-out; }
   .menu-btn .btn-line {
     width: 40px;
     height: 6px;
     border-radius: 5px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-in-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close:hover {
-      transform: rotate(360deg); }
+      transform: rotate(360deg);
+      transition: all 0.6s ease-out; }
     .menu-btn.close .btn-line {
       background-color: #08cda9; }
       .menu-btn.close .btn-line:nth-child(1) {
@@ -49,14 +50,14 @@
     background-image: linear-gradient(to bottom, #283048, #788488);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.7s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     opacity: 8;
     background-image: linear-gradient(to bottom, #1c3147, #064e55);
     transform: translate3d(0, 100%, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.7s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait .bio-image {
@@ -68,14 +69,14 @@
       background-color: #63c6fa; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-in-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
       color: rgba(1, 200, 184, 0.856); }
       .menu .nav-item.current > a:hover {
         color: #44fff6;
-        transition: all 0.5s ease-out; }
+        transition: all 0.5s ease-in-out; }
   .menu .nav-link {
     font-family: 'PT Sans', sans-serif;
     display: inline-block;
@@ -88,19 +89,19 @@
   .menu .nav-link:hover {
     font-weight: bold;
     color: #2f94d8;
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-in-out; }
 
 .nav-item:nth-child(1) {
-  transition-delay: 0.1s; }
+  transition-delay: 0.15s; }
 
 .nav-item:nth-child(2) {
-  transition-delay: 0.2s; }
-
-.nav-item:nth-child(3) {
   transition-delay: 0.3s; }
 
+.nav-item:nth-child(3) {
+  transition-delay: 0.45s; }
+
 .nav-item:nth-child(4) {
-  transition-delay: 0.4s; }
+  transition-delay: 0.6s; }
 
 * {
   box-sizing: border-box; }
@@ -161,16 +162,6 @@ header {
 .text-title {
   color: burlywood; }
 
-.Portfolio-Image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  border: #2f94d8 3px solid;
-  width: 250px;
-  height: 250px;
-  background-image: linear-gradient(to bottom, #2ab4ff, pink); }
-
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
@@ -178,10 +169,11 @@ main {
     margin-top: 1rem;
     text-align: center; }
     main .icons a {
-      padding: 0.6rem; }
+      padding: 0.6rem;
+      transition: color 1s ease-in-out; }
       main .icons a:hover {
         color: #2f94d8;
-        transition: all 0.5s ease-out; }
+        transition: all 0.5s ease-in-out; }
       main .icons a.git-color:hover {
         color: #df56c4; }
   main#home {
@@ -227,7 +219,7 @@ main {
     padding: 0.5rem 1rem; }
     .about-info .job:hover {
       background-image: linear-gradient(to right, #0f181f, #1e3f50);
-      transition: all 0.5s ease-out; }
+      transition: all 0.5s ease-in-out; }
     .about-info .job h3 {
       color: #3fe0fc; }
   .about-info .job-1 {
@@ -285,7 +277,7 @@ body#bg-work-color {
     .project img:hover {
       border: #0377c4 4px solid;
       border-color: #2f94d8;
-      transition: all 0.5s ease-out; }
+      transition: all 0.5s ease-in-out; }
 
 .item .button {
   background-image: linear-gradient(to right, #3a5fda, #188ea9);
@@ -304,7 +296,7 @@ body#bg-work-color {
   border-radius: 4%; }
   .item .button:hover {
     border: white 3px solid;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
     height: 70px; }
 
 .item .button2 {
@@ -324,7 +316,7 @@ body#bg-work-color {
   border-radius: 4%; }
   .item .button2:hover {
     border: white 3px solid;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
     height: 70px;
     margin-bottom: 1rem; }
 
@@ -359,13 +351,15 @@ span {
     border: white 3px solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    border-radius: 5%; }
+    border-radius: 5%;
+    transition: all 0.7s ease-in-out; }
     .contact-boxes div:hover {
       padding: 2.5rem 3.5rem;
       background: #74047e;
       color: #fff;
       border-color: #d2406e;
-      transition: all 0.5s ease-out; }
+      opacity: 0.8;
+      transition: all 0.5s ease-in-out; }
       .contact-boxes div:hover span {
         color: #5ab5e2; }
 
@@ -453,6 +447,6 @@ span {
       padding: 1rem 1.5rem;
       background: #9affab;
       color: #000;
-      transition: all 0.5s ease-out; }
+      transition: all 0.5s ease-in-out; }
       .contact-boxes div:hover span {
         color: #044d72; } }
