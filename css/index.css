@@ -1,6 +1,15 @@
 header{
     font-family: 'PT Sans', sans-serif;
 }
+#home .Portfolio-Image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: rgba(33, 177, 255, 0.803) 3px solid;
+    width: 250px;
+    height: 250px;
+}
 #menu-bar{
     width: 40px;
     position: absolute;
@@ -14,15 +23,15 @@ header{
     width: 100%;
     background: white;
     border-radius: 5px;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 #bar1{
     transform: translateY(-4px);
-    transition: all 0.6s ease-out;
+    transition: all 0.6s ease-in-out;
 }
 #bar3{
     transform: translateY(4px);
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 .change .bar{
     background-color: rgb(8, 205, 169);
@@ -63,7 +72,7 @@ header{
 .nav li a:hover{
     font-weight: bold;
     color: rgb(76, 183, 255);
-    transition: all 0.5s ease-out
+    transition: all 0.5s ease-in-out
     
 }
 li.current > a{
@@ -71,11 +80,11 @@ li.current > a{
 }
 li.current > a:hover{
     color: rgb(0, 255, 255);
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 .menuIndex .nav-itemI{
     transform: translate3d(1000px, -1000px, 0);
-    transition: all 0.7s ease-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .nav-itemI.show{
@@ -106,7 +115,7 @@ li.current > a:hover{
     width: 100%;
     height: 100%;
     transform: translate3d(100%, -100%, 0);
-    transition: all 0.9s ease-out;
+    transition: all 0.9s ease-in-out;
     
 }
 .menu-bg::after{
@@ -122,7 +131,7 @@ li.current > a:hover{
 }
 .change-bg {
     transform: translate3d(0,0,0);
-    -webkit-animation: change-bg 1s ease-out 1s 3 alternate;
+    -webkit-animation: change-bg 1s ease-in-out 1s 3 alternate;
 }
 @-webkit-keyframes change-bg {
     0%       { left:5px; }
@@ -139,7 +148,7 @@ li.current > a:hover{
 /* About Page background setting */
 .nav-itemA{
     transform: translate3d(0, -1000px, 0);
-    transition: all 0.7s ease-out;
+    transition: all 0.7s ease-in-out;
 }
 .aboutShow{
     transform: translate3d(0,0,0)
@@ -167,7 +176,7 @@ li.current > a:hover{
     width: 100%;
     height: 100vh;
     transform: translate3d(0, -100%,0);
-    transition: all 0.9s ease-out;
+    transition: all 0.9s ease-in-out;
 }
 .about-bg::after{
     content: '';
@@ -184,7 +193,7 @@ li.current > a:hover{
 .changeAbout-bg{
     transform: translate3d(0,0,0);
     overflow-y: hidden;
-    -webkit-animation:about-bg 1s ease-out 1s 3 alternate;
+    -webkit-animation:about-bg 1s ease-in-out 1s 3 alternate;
 }
 /* Bounce affect for css */
 
