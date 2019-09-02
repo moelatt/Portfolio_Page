@@ -21,10 +21,10 @@
         }
         .Portfolio-Image{
             margin: auto;
-            border-radius: 50%;
+            border-radius: 40px;
             border: $secondary-color 3px solid;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: auto;
             background-color: rgb(99, 198, 250);
         }
     }
@@ -98,10 +98,10 @@
         }
         .Portfolio-Image, .bio-image{
             margin: auto;
-            border-radius: 50%;
+            border-radius: 40px;
             border: $secondary-color 3px solid;
             width: 150px;
-            height: 150px;
+            height: auto;
             background-color: rgb(99, 198, 250);
         }
     }

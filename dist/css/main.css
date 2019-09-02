@@ -384,10 +384,10 @@ span {
     font-size: 5rem; }
   main#home .Portfolio-Image {
     margin: auto;
-    border-radius: 50%;
+    border-radius: 40px;
     border: #2f94d8 3px solid;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: auto;
     background-color: #63c6fa; }
   main {
     align-items: center;
@@ -433,10 +433,10 @@ span {
     font-size: 2rem; }
   main#home .Portfolio-Image, main#home .bio-image, main#about .Portfolio-Image, main#about .bio-image, main#work .Portfolio-Image, main#work .bio-image, main#contact .Portfolio-Image, main#contact .bio-image {
     margin: auto;
-    border-radius: 50%;
+    border-radius: 40px;
     border: #2f94d8 3px solid;
     width: 150px;
-    height: 150px;
+    height: auto;
     background-color: #63c6fa; }
   .project {
     grid-template-columns: 1fr; }
